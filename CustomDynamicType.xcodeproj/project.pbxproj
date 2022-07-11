@@ -39,6 +39,9 @@
 		22931B2B287BB03C0053C103 /* RobotoMono-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22931B1D287BB03C0053C103 /* RobotoMono-ExtraLightItalic.ttf */; };
 		22931B2C287BB03C0053C103 /* RobotoMono-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22931B1E287BB03C0053C103 /* RobotoMono-ThinItalic.ttf */; };
 		22931B2E287BB1360053C103 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22931B2D287BB1330053C103 /* PlayfairDisplay-Regular.ttf */; };
+		22931B30287BB1E00053C103 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22931B2F287BB1E00053C103 /* UIFont+.swift */; };
+		22931B34287BC0970053C103 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22931B33287BC0970053C103 /* TestView.swift */; };
+		22931B36287BC6670053C103 /* UIView+SetFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22931B35287BC6670053C103 /* UIView+SetFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		22931B1D287BB03C0053C103 /* RobotoMono-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		22931B1E287BB03C0053C103 /* RobotoMono-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-ThinItalic.ttf"; sourceTree = "<group>"; };
 		22931B2D287BB1330053C103 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		22931B2F287BB1E00053C103 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		22931B33287BC0970053C103 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		22931B35287BC6670053C103 /* UIView+SetFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SetFont.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,9 @@
 				2208251D287B63B3002B6A19 /* AppDelegate.swift */,
 				2208251F287B63B3002B6A19 /* SceneDelegate.swift */,
 				22082521287B63B3002B6A19 /* ViewController.swift */,
+				22931B33287BC0970053C103 /* TestView.swift */,
+				22931B2F287BB1E00053C103 /* UIFont+.swift */,
+				22931B35287BC6670053C103 /* UIView+SetFont.swift */,
 				22082523287B63B3002B6A19 /* Main.storyboard */,
 				22082526287B63B6002B6A19 /* Assets.xcassets */,
 				22082528287B63B6002B6A19 /* LaunchScreen.storyboard */,
@@ -266,6 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22931B36287BC6670053C103 /* UIView+SetFont.swift in Sources */,
+				22931B30287BB1E00053C103 /* UIFont+.swift in Sources */,
+				22931B34287BC0970053C103 /* TestView.swift in Sources */,
 				22082522287B63B3002B6A19 /* ViewController.swift in Sources */,
 				2208251E287B63B3002B6A19 /* AppDelegate.swift in Sources */,
 				22082520287B63B3002B6A19 /* SceneDelegate.swift in Sources */,

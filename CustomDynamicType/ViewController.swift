@@ -21,7 +21,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        largeTitleLabel.setFont(.preferredFont(forTextStyle: .largeTitle))
     }
 
 
