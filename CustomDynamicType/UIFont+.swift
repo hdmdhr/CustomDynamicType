@@ -24,22 +24,42 @@ extension UIFont {
 }
 
 
-enum CustomFont: String {
+enum CustomFont: CustomStringConvertible {
     
-    case RobotoMono
-    case PlayfairDisplay
+    case robotoMono(weight: RobotoMonoWeight)
+    case playfairDisplay(weight: PlayfairDisplayWeight)
     
-    enum Weight: String {
+    var description: String {
+        switch self {
+        case .robotoMono: return "RobotoMono"
+        case .playfairDisplay: return "PlayfairDisplay"
+        }
+    }
+    
+    var weight: String {
+        switch self {
+        case .robotoMono(let weight): return weight.rawValue
+        case .playfairDisplay(let weight): return weight.rawValue
+        }
+    }
+    
+    enum PlayfairDisplayWeight: String {
+        case Regular, Italic
+        case Medium, SemiBold, Bold, ExtraBold, Black
+        case MediumItalic, SemiBoldItalic, BoldItalic, ExtraBoldItalic, BlackItalic
+    }
+    
+    enum RobotoMonoWeight: String {
         case ExtraLight, Thin, Light
         case ExtraLightItalic, ThinItalic, LightItalic
         case Regular, Italic
-        case Medium, Bold, SemiBold, ExtraBold, Black
-        case MediumItalic, BoldItalic, SemiBoldItalic, ExtraBoldItalic, BlackItalic
+        case Medium, Bold, SemiBold
+        case MediumItalic, BoldItalic, SemiBoldItalic
     }
     
-    func font(textStyle: UIFont.TextStyle, weight: Weight = .Regular, defaultSize: CGFloat? = nil) -> UIFont {
+    func font(textStyle: UIFont.TextStyle, defaultSize: CGFloat? = nil) -> UIFont {
         // 1
-        let fontName = [rawValue, weight.rawValue].joined(separator: "-")
+        let fontName = [description, weight].joined(separator: "-")
         // 2
         let size = defaultSize ?? UIFontDescriptor.preferredFontDescriptor(withTextStyle: textStyle).pointSize
         // 3

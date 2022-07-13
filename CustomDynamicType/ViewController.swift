@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        largeTitleLabel.setFont(CustomFont.PlayfairDisplay.font(textStyle: .largeTitle, weight: .MediumItalic))
+        largeTitleLabel.setFont(CustomFont.playfairDisplay(weight: .MediumItalic).font(textStyle: .largeTitle))
     }
 
 
