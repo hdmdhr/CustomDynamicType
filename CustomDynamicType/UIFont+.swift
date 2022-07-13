@@ -22,3 +22,30 @@ extension UIFont {
     }
     
 }
+
+
+enum CustomFont: String {
+    
+    case RobotoMono
+    case PlayfairDisplay
+    
+    enum Weight: String {
+        case ExtraLight, Thin, Light
+        case ExtraLightItalic, ThinItalic, LightItalic
+        case Regular, Italic
+        case Medium, Bold, SemiBold, ExtraBold, Black
+        case MediumItalic, BoldItalic, SemiBoldItalic, ExtraBoldItalic, BlackItalic
+    }
+    
+    func font(textStyle: UIFont.TextStyle, weight: Weight = .Regular, defaultSize: CGFloat? = nil) -> UIFont {
+        // 1
+        let fontName = [rawValue, weight.rawValue].joined(separator: "-")
+        // 2
+        let size = defaultSize ?? UIFontDescriptor.preferredFontDescriptor(withTextStyle: textStyle).pointSize
+        // 3
+        let fontToScale = UIFont(name: fontName, size: size) ?? .systemFont(ofSize: size)
+        // 4
+        return textStyle.metrics.scaledFont(for: fontToScale)
+    }
+    
+}
