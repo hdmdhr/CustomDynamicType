@@ -13,7 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        #if DEBUG
+        let myFamilyNames = ["roboto mono", "playfair"]
+        for family in UIFont.familyNames {
+            guard myFamilyNames.contains(where: { family.lowercased().contains($0.lowercased()) }) else { continue }
+            
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
+        #endif
+        
         return true
     }
 
