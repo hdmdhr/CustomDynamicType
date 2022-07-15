@@ -22,7 +22,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        largeTitleLabel.setFont(CustomFont.playfairDisplay(weight: .MediumItalic).font(textStyle: .largeTitle))
+        largeTitleLabel.setFont(CustomFont.largeTitle)
+        headlineLabel.setFont(CustomFont.headline)
+        
+        typealias CT = CustomFont
+        
+        setFontsOnViews(([largeTitleLabel], CT.largeTitle),
+                        ([headlineLabel], CT.headline),
+                        ([bodyTextView], CT.headline))
+        
+        setTextsOnViews((largeTitleLabel, "My Large Title"),
+                        (headlineLabel, "My cool headline"),
+                        (bodyTextView, "My body content"))
     }
 
 

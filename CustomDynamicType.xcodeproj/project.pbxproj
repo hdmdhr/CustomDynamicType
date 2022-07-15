@@ -13,6 +13,7 @@
 		22082525287B63B3002B6A19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22082523287B63B3002B6A19 /* Main.storyboard */; };
 		22082527287B63B6002B6A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22082526287B63B6002B6A19 /* Assets.xcassets */; };
 		2208252A287B63B6002B6A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22082528287B63B6002B6A19 /* LaunchScreen.storyboard */; };
+		228329532880DFC200B9202A /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228329522880DFC200B9202A /* CustomFont.swift */; };
 		22931B05287BB01F0053C103 /* PlayfairDisplay-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22931AFD287BB0130053C103 /* PlayfairDisplay-BlackItalic.ttf */; };
 		22931B06287BB01F0053C103 /* PlayfairDisplay-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22931AF9287BB0130053C103 /* PlayfairDisplay-BoldItalic.ttf */; };
 		22931B07287BB01F0053C103 /* PlayfairDisplay-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22931B04287BB0140053C103 /* PlayfairDisplay-Black.ttf */; };
@@ -41,7 +42,7 @@
 		22931B2E287BB1360053C103 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22931B2D287BB1330053C103 /* PlayfairDisplay-Regular.ttf */; };
 		22931B30287BB1E00053C103 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22931B2F287BB1E00053C103 /* UIFont+.swift */; };
 		22931B34287BC0970053C103 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22931B33287BC0970053C103 /* TestView.swift */; };
-		22931B36287BC6670053C103 /* UIView+SetFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22931B35287BC6670053C103 /* UIView+SetFont.swift */; };
+		22931B36287BC6670053C103 /* UIView+SetFontText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22931B35287BC6670053C103 /* UIView+SetFontText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		22082526287B63B6002B6A19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22082529287B63B6002B6A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2208252B287B63B6002B6A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228329522880DFC200B9202A /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		22931AF9287BB0130053C103 /* PlayfairDisplay-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-BoldItalic.ttf"; sourceTree = "<group>"; };
 		22931AFA287BB0130053C103 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		22931AFB287BB0130053C103 /* PlayfairDisplay-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		22931B2D287BB1330053C103 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		22931B2F287BB1E00053C103 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		22931B33287BC0970053C103 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		22931B35287BC6670053C103 /* UIView+SetFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SetFont.swift"; sourceTree = "<group>"; };
+		22931B35287BC6670053C103 /* UIView+SetFontText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SetFontText.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +120,9 @@
 				2208251F287B63B3002B6A19 /* SceneDelegate.swift */,
 				22082521287B63B3002B6A19 /* ViewController.swift */,
 				22931B33287BC0970053C103 /* TestView.swift */,
+				228329522880DFC200B9202A /* CustomFont.swift */,
 				22931B2F287BB1E00053C103 /* UIFont+.swift */,
-				22931B35287BC6670053C103 /* UIView+SetFont.swift */,
+				22931B35287BC6670053C103 /* UIView+SetFontText.swift */,
 				22082523287B63B3002B6A19 /* Main.storyboard */,
 				22082526287B63B6002B6A19 /* Assets.xcassets */,
 				22082528287B63B6002B6A19 /* LaunchScreen.storyboard */,
@@ -275,7 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22931B36287BC6670053C103 /* UIView+SetFont.swift in Sources */,
+				228329532880DFC200B9202A /* CustomFont.swift in Sources */,
+				22931B36287BC6670053C103 /* UIView+SetFontText.swift in Sources */,
 				22931B30287BB1E00053C103 /* UIFont+.swift in Sources */,
 				22931B34287BC0970053C103 /* TestView.swift in Sources */,
 				22082522287B63B3002B6A19 /* ViewController.swift in Sources */,
